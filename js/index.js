@@ -61,27 +61,21 @@ $(function() {
     if ($(this).hasClass('info')) {
       $(this).removeClass('info').val('');
     }
-  }).keyup(function() {
+  }).keypress(function(e) {
+    if (e.which != 13) return;
+
     var val = $(this).val();
-
-    $('li:not(.folder)').each(function(i, el) {
-      var key = $('a', el).get(0);
-      var key = unescape(key.href.substr(key.href.indexOf('key=') + 4));
-
-      if (key.indexOf(val) == -1) {
-        $(el).addClass('hidden');
-      } else {
-        $(el).removeClass('hidden');
+    $.ajax({
+      type:"GET",
+      url:"key.php?key=" + val + "*",
+      success: function(keys) {
+        $('li.folder a').hide()
+        var arr = jQuery.parseJSON(keys);
+        for (var i in arr) {
+          $('li.folder a[href*="key=' + arr[i] + '"]').show()
+        }                
       }
-    });
-
-    $('li.folder').each(function(i, el) {
-      if ($('li:not(.hidden, .folder)', el).length == 0) {
-        $(el).addClass('hidden');
-      } else {
-        $(el).removeClass('hidden');
-      }
-    });
+    })
   });
 
   $('.deltree').click(function(e) {

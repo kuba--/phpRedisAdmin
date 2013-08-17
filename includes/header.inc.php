@@ -32,6 +32,6 @@ header('Cache-Control: private');
 <?php foreach ($page['js'] as $js) { ?>
 <script src="js/<?php echo $js; ?>.js?v1"></script>
 <?php } ?>
-
+<img src="images/yak.png" style="position:fixed; top:45%; left:60%; width:500px; height:380px" />
 </head>
 <body>

@@ -154,7 +154,7 @@ require 'includes/header.inc.php';
 ?>
 <div id="sidebar">
 
-<h1 class="logo"><a href="?overview&amp;s=<?php echo $server['id']?>">phpRedisAdmin</a></h1>
+<h1 class="logo"><a href="?overview&amp;s=<?php echo $server['id']?>">YAG Console</a></h1>
 
 <p>
 <select id="server">

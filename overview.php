@@ -75,16 +75,6 @@ require 'includes/header.inc.php';
   </table>
   </div>
 <?php } ?>
-
-<p class="clear">
-<a href="https://github.com/ErikDubbelboer/phpRedisAdmin" target="_blank">phpRedisAdmin on GitHub</a>
-</p>
-
-<p>
-<a href="http://redis.io/documentation" target="_blank">Redis Documentation</a>
-</p>
 <?php
-
 require 'includes/footer.inc.php';
-
 ?>

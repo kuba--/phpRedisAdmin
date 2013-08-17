@@ -1,5 +1,5 @@
 <?php
-require dirname(__FILE__) . '/../vendor/autoload.php';
+require dirname(__FILE__) . '/../predis/autoload.php';
 
 define('PHPREDIS_ADMIN_PATH', dirname(__DIR__));
 

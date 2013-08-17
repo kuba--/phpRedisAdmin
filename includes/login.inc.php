@@ -1,9 +1,7 @@
 <?php
 
 // This fill will perform HTTP digest authentication. This is not the most secure form of authentication so be carefull when using this.
-
-
-$realm = 'phpRedisAdmin';
+$realm = 'YAG';
 
 // Using the md5 of the user agent and IP should make it a bit harder to intercept and reuse the responses.
 $opaque = md5('phpRedisAdmin'.$_SERVER['HTTP_USER_AGENT'].$_SERVER['REMOTE_ADDR']);
